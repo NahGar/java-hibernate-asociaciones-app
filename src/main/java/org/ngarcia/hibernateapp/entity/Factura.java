@@ -13,6 +13,8 @@ public class Factura {
     private Long total;
 
     @ManyToOne
+    //por default pone nombre cliente_id, pero se puede cambiar
+    @JoinColumn(name="id_cliente")
     private Cliente cliente;
 
     public Factura() {
@@ -53,5 +55,13 @@ public class Factura {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    @Override
+    public String toString() {
+        return  "id=" + id +
+                ", descripcion='" + descripcion + '\'' +
+                ", total=" + total +
+                ", cliente=" + cliente;
     }
 }
