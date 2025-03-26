@@ -26,6 +26,7 @@ public class HibernateAsociacionesOneToMany {
 
             System.out.println(cliente);
 
+
             //borrar direccion
             em.getTransaction().begin();
 
