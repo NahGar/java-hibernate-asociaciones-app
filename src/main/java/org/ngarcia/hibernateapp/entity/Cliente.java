@@ -27,7 +27,13 @@ public class Cliente {
     //orphanRemoval elimina las direcciones que queden sin vinculación con algún cliente
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     //sin JoinColumn crea una tabla intermedia clientes_direcciones con los ids de ambas tablas
-    @JoinColumn(name="id_cliente")
+    //con JoinColumn crea un atributo id_cliente que es la FK a clientes en direcciones
+    //@JoinColumn(name="id_cliente")
+    @JoinTable(name="clientes_direcciones",
+            joinColumns = @JoinColumn(name="id_cliente"),
+            inverseJoinColumns = @JoinColumn(name="id_direccion"),
+            //la dirección es única en esta tabla
+            uniqueConstraints = @UniqueConstraint(columnNames={"id_direccion"}))
     private List<Direccion> direcciones;
 
     //JPA requiere un constructor vacío si existe un constructor con parámetros
