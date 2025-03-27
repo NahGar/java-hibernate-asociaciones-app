@@ -5,7 +5,7 @@ import org.ngarcia.hibernateapp.entity.Cliente;
 import org.ngarcia.hibernateapp.entity.Factura;
 import org.ngarcia.hibernateapp.util.JpaUtil;
 
-public class HibernateAsociacionesManyToOne {
+public class HibAsocManyToOne {
 
     public static void main(String[] args) {
 

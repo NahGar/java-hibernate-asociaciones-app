@@ -2,6 +2,8 @@ package org.ngarcia.hibernateapp.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
 @Table(name="facturas")
 public class Factura {
@@ -61,7 +63,17 @@ public class Factura {
     public String toString() {
         return  "id=" + id +
                 ", descripcion='" + descripcion + '\'' +
-                ", total=" + total +
-                ", cliente=" + cliente;
+                ", total=" + total;
+                // no imprime cliente porque el cliente imprime las facturas y loop
+                //", cliente=" + cliente;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Factura factura = (Factura) o;
+        return Objects.equals(id, factura.id) && Objects.equals(descripcion, factura.descripcion) &&
+                Objects.equals(total, factura.total);
+    }
+
 }

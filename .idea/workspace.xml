@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65ffe0f8-adb7-4af0-8256-dc4f4c700874" name="Changes" comment="desde saico">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesManyToOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesManyToOneFind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesOneToMany.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Direccion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibAsocOneToManyBidirec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibAsocOneToManyBidirecFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesManyToOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibAsocManyToOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesManyToOneFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibAsocManyToOneFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesOneToMany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibAsocOneToMany.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesOneToManyFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibAsocOneToManyFind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +57,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HibAsocOneToManyBidirec.executor": "Run",
+    "Application.HibAsocOneToManyBidirecFind.executor": "Run",
     "Application.HibernateAsociacionesManyToOne.executor": "Run",
     "Application.HibernateAsociacionesManyToOneFind.executor": "Run",
     "Application.HibernateAsociacionesOneToMany.executor": "Run",
+    "Application.HibernateAsociacionesOneToManyFind.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -70,9 +75,9 @@
       <recent name="org.ngarcia.hibernateapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HibernateAsociacionesOneToMany">
-    <configuration name="HibernateAsociacionesManyToOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibernateAsociacionesManyToOne" />
+  <component name="RunManager" selected="Application.HibAsocOneToManyBidirecFind">
+    <configuration name="HibAsocManyToOneFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibAsocManyToOneFind" />
       <module name="hibernate-jpa-app" />
       <extension name="coverage">
         <pattern>
@@ -84,8 +89,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HibernateAsociacionesManyToOneFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibernateAsociacionesManyToOneFind" />
+    <configuration name="HibAsocOneToMany" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibAsocOneToMany" />
       <module name="hibernate-jpa-app" />
       <extension name="coverage">
         <pattern>
@@ -97,8 +102,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HibernateAsociacionesOneToMany" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibernateAsociacionesOneToMany" />
+    <configuration name="HibAsocOneToManyBidirec" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibAsocOneToManyBidirec" />
+      <module name="hibernate-jpa-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ngarcia.hibernateapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HibAsocOneToManyBidirecFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibAsocOneToManyBidirecFind" />
+      <module name="hibernate-jpa-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ngarcia.hibernateapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HibAsocOneToManyFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibAsocOneToManyFind" />
       <module name="hibernate-jpa-app" />
       <extension name="coverage">
         <pattern>
@@ -112,9 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HibernateAsociacionesOneToMany" />
-        <item itemvalue="Application.HibernateAsociacionesManyToOneFind" />
-        <item itemvalue="Application.HibernateAsociacionesManyToOne" />
+        <item itemvalue="Application.HibAsocOneToManyBidirecFind" />
+        <item itemvalue="Application.HibAsocOneToManyBidirec" />
+        <item itemvalue="Application.HibAsocOneToManyFind" />
+        <item itemvalue="Application.HibAsocOneToMany" />
+        <item itemvalue="Application.HibAsocManyToOneFind" />
       </list>
     </recent_temporary>
   </component>
