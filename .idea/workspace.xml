@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65ffe0f8-adb7-4af0-8256-dc4f4c700874" name="Changes" comment="desde saico">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibAsocOneToOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/ClienteDetalle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +57,7 @@
   "keyToString": {
     "Application.HibAsocOneToManyBidirec.executor": "Run",
     "Application.HibAsocOneToManyBidirecFind.executor": "Run",
+    "Application.HibAsocOneToOne.executor": "Run",
     "Application.HibernateAsociacionesManyToOne.executor": "Run",
     "Application.HibernateAsociacionesManyToOneFind.executor": "Run",
     "Application.HibernateAsociacionesOneToMany.executor": "Run",
@@ -66,20 +74,7 @@
       <recent name="org.ngarcia.hibernateapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HibAsocOneToManyBidirecFind">
-    <configuration name="HibAsocManyToOneFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibAsocManyToOneFind" />
-      <module name="hibernate-jpa-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.ngarcia.hibernateapp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.HibAsocOneToOne">
     <configuration name="HibAsocOneToMany" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibAsocOneToMany" />
       <module name="hibernate-jpa-app" />
@@ -132,13 +127,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HibAsocOneToOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ngarcia.hibernateapp.HibAsocOneToOne" />
+      <module name="hibernate-jpa-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ngarcia.hibernateapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HibAsocOneToOne" />
         <item itemvalue="Application.HibAsocOneToManyBidirecFind" />
         <item itemvalue="Application.HibAsocOneToManyBidirec" />
         <item itemvalue="Application.HibAsocOneToManyFind" />
         <item itemvalue="Application.HibAsocOneToMany" />
-        <item itemvalue="Application.HibAsocManyToOneFind" />
       </list>
     </recent_temporary>
   </component>
@@ -175,8 +183,27 @@
       <option name="project" value="LOCAL" />
       <updated>1743102576715</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="desde saico">
+      <option name="closed" value="true" />
+      <created>1743102652735</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743102652735</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="desde saico" />
