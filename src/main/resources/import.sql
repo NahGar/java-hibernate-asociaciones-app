@@ -1,1 +1,2 @@
+
 INSERT INTO `clientes` (id,nombre,apellido,forma_pago,creado_en,editado_en) VALUES (1,'Andrés','Rodríguez','debito',NULL,NULL),(2,'Micaela','Nieves','credito',NULL,NULL),(3,'Evan','García','paypal',NULL,NULL),(4,'Gael','García','debito',NULL,NULL),(6,'Evan','ddd','credito',NULL,NULL),(8,'Pepe','Mujica','abcd','2025-03-24 10:34:20','2025-03-24 10:34:45');

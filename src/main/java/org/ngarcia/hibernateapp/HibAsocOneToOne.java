@@ -2,27 +2,25 @@ package org.ngarcia.hibernateapp;
 
 import jakarta.persistence.EntityManager;
 import org.ngarcia.hibernateapp.entity.Cliente;
-import org.ngarcia.hibernateapp.entity.Factura;
+import org.ngarcia.hibernateapp.entity.ClienteDetalle;
 import org.ngarcia.hibernateapp.util.JpaUtil;
 
-public class HibernateAsociacionesManyToOne {
-
+public class HibAsocOneToOne {
     public static void main(String[] args) {
 
         EntityManager em = JpaUtil.getEntityManager();
 
-        try {
+        try{
             em.getTransaction().begin();
 
-            Cliente cliente = new Cliente("Carlos","Gutierrez");
-            cliente.setFormaPago("cash");
+            Cliente cliente = new Cliente("Gustavo","D'Oliveira");
+            cliente.setFormaPago("especias");
             em.persist(cliente);
 
-            Factura factura = new Factura("compras de oficina", 1000L);
-            factura.setCliente(cliente);
-            em.persist(factura);
+            ClienteDetalle clienteDetalle = new ClienteDetalle(true,800L);
+            clienteDetalle.setCliente(cliente);
+            em.persist(clienteDetalle);
 
-            System.out.println(factura);
             em.getTransaction().commit();
         } catch (Exception e) {
             em.getTransaction().rollback();

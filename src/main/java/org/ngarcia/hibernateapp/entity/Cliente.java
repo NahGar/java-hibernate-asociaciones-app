@@ -12,9 +12,13 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "apellido")
     private String apellido;
 
     @Column(name="forma_pago")
@@ -36,8 +40,12 @@ public class Cliente {
             uniqueConstraints = @UniqueConstraint(columnNames={"id_direccion"}))
     private List<Direccion> direcciones;
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "cliente")
+    private List<Factura> facturas;
+
     //JPA requiere un constructor vacío si existe un constructor con parámetros
     public Cliente() {
+        facturas = new ArrayList<>();
         direcciones = new ArrayList<>();
     }
 
@@ -95,6 +103,28 @@ public class Cliente {
         this.direcciones = direcciones;
     }
 
+    public List<Factura> getFacturas() {
+        return facturas;
+    }
+
+    public void setFacturas(List<Factura> facturas) {
+        this.facturas = facturas;
+    }
+
+    public Auditoria getAuditoria() {
+        return auditoria;
+    }
+
+    public void setAuditoria(Auditoria auditoria) {
+        this.auditoria = auditoria;
+    }
+
+    public Cliente addFactura(Factura factura) {
+        factura.setCliente(this);
+        this.facturas.add(factura);
+        return this;
+    }
+
     @Override
     public String toString() {
         LocalDateTime creadoEn = this.auditoria != null ? this.auditoria.getCreadoEn(): null;
@@ -105,6 +135,7 @@ public class Cliente {
                 ", formaPago='" + formaPago + '\'' +
                 ", creado en='" + creadoEn + '\'' +
                 ", editado en='" + editadoEn + '\'' +
-                ", direcciones='" + direcciones + '\'';
+                ", direcciones='" + direcciones + '\'' +
+                ", facturas='" + facturas + '\'';
     }
 }

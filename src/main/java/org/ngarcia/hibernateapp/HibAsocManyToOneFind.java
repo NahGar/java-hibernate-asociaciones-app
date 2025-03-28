@@ -5,7 +5,7 @@ import org.ngarcia.hibernateapp.entity.Cliente;
 import org.ngarcia.hibernateapp.entity.Factura;
 import org.ngarcia.hibernateapp.util.JpaUtil;
 
-public class HibernateAsociacionesManyToOneFind {
+public class HibAsocManyToOneFind {
 
     public static void main(String[] args) {
 
