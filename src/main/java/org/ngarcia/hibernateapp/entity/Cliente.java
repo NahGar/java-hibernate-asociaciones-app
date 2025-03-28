@@ -43,6 +43,14 @@ public class Cliente {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "cliente")
     private List<Factura> facturas;
 
+    //@OneToOne
+    //@JoinColumn(name = "id_cliente_detalle")
+    //private ClienteDetalle detalle;
+    //Se modifica para onetoone bidireccional
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "cliente")
+    private ClienteDetalle detalle;
+
+
     //JPA requiere un constructor vacío si existe un constructor con parámetros
     public Cliente() {
         facturas = new ArrayList<>();
@@ -119,6 +127,24 @@ public class Cliente {
         this.auditoria = auditoria;
     }
 
+    public ClienteDetalle getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(ClienteDetalle detalle) {
+        this.detalle = detalle;
+    }
+
+    public void addDetalle(ClienteDetalle detalle) {
+        this.detalle = detalle;
+        detalle.setCliente(this);
+    }
+
+    public void removeDetalle() {
+        detalle.setCliente(null);
+        this.detalle = null;
+    }
+
     public Cliente addFactura(Factura factura) {
         factura.setCliente(this);
         this.facturas.add(factura);
@@ -136,6 +162,7 @@ public class Cliente {
                 ", creado en='" + creadoEn + '\'' +
                 ", editado en='" + editadoEn + '\'' +
                 ", direcciones='" + direcciones + '\'' +
-                ", facturas='" + facturas + '\'';
+                ", facturas='" + facturas + '\'' +
+                ", detalle='" + detalle + '\'';
     }
 }

@@ -15,8 +15,14 @@ public class ClienteDetalle {
     @Column(name = "puntos_acumulados")
     private Long puntosAcumulados;
 
+    //la relación se pasa a Cliente
+    //@OneToOne
+    //private Cliente cliente;
+    //vuelve aquí para relacion OneToOne
     @OneToOne
+    @JoinColumn(name = "id_cliente")
     private Cliente cliente;
+
 
     public ClienteDetalle() {
     }
