@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65ffe0f8-adb7-4af0-8256-dc4f4c700874" name="Changes" comment="desde saico">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesOneToManyFind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesOneToMany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/HibernateAsociacionesOneToMany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ngarcia/hibernateapp/entity/Cliente.java" afterDir="false" />
-    </list>
+    <list default="true" id="65ffe0f8-adb7-4af0-8256-dc4f4c700874" name="Changes" comment="desde casa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,11 +141,39 @@
       <option name="project" value="LOCAL" />
       <updated>1742840082861</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="desde saico">
+      <option name="closed" value="true" />
+      <created>1743014448972</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743014448972</updated>
+    </task>
+    <task id="LOCAL-00003" summary="desde casa">
+      <option name="closed" value="true" />
+      <created>1743014525536</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743014525536</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="desde saico" />
-    <option name="LAST_COMMIT_MESSAGE" value="desde saico" />
+    <MESSAGE value="desde casa" />
+    <option name="LAST_COMMIT_MESSAGE" value="desde casa" />
   </component>
 </project>
