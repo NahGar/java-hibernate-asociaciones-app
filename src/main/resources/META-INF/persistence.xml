@@ -6,6 +6,8 @@
         <class>org.ngarcia.hibernateapp.entity.Factura</class>
         <class>org.ngarcia.hibernateapp.entity.Direccion</class>
         <class>org.ngarcia.hibernateapp.entity.ClienteDetalle</class>
+        <class>org.ngarcia.hibernateapp.entity.Curso</class>
+        <class>org.ngarcia.hibernateapp.entity.Alumno</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/java_hibernate_curso?serverTimezone=America/Montevideo"/>
