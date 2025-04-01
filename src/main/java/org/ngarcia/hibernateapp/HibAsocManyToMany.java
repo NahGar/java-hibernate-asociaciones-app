@@ -30,6 +30,17 @@ public class HibAsocManyToMany {
 
             System.out.println(alumno1);
             System.out.println(alumno2);
+
+            em.getTransaction().begin();
+
+            Curso curso3 = em.find(Curso.class, 3L);
+            //elimina de la tabla alumnos_cursos
+            alumno1.getCursos().remove(curso3);
+
+            em.getTransaction().commit();
+
+            System.out.println(alumno1);
+            System.out.println(alumno2);
         }
         catch (Exception e) {
             em.getTransaction().rollback();

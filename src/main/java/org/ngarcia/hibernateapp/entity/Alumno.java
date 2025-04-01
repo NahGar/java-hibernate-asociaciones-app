@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "alumnos")
@@ -70,6 +71,23 @@ public class Alumno {
     public void addCurso(Curso curso) {
         this.cursos.add(curso);
         curso.getAlumnos().add(this);
+    }
+
+    public void removeCurso(Curso curso) {
+        this.cursos.remove(curso);
+        curso.getAlumnos().remove(this);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Alumno alumno = (Alumno) o;
+        return Objects.equals(id, alumno.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 
     @Override

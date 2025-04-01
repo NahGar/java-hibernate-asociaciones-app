@@ -5,7 +5,7 @@ import org.ngarcia.hibernateapp.entity.Alumno;
 import org.ngarcia.hibernateapp.entity.Curso;
 import org.ngarcia.hibernateapp.util.JpaUtil;
 
-public class HibAsocManyToManyBidirec {
+public class HibAsocManyToManyFindBidirec {
     public static void main(String[] args) {
 
         EntityManager em = JpaUtil.getEntityManager();
@@ -13,20 +13,20 @@ public class HibAsocManyToManyBidirec {
         try {
             em.getTransaction().begin();
 
-            Alumno alumno1 = new Alumno("Evan", "Garcia");
-            Alumno alumno2 = new Alumno("Gael", "Garcia");
+            Alumno alumno1 = em.find(Alumno.class, 1L);
+            Alumno alumno2 = em.find(Alumno.class, 2L);
 
-            Curso curso1 = new Curso("Curso Java", "Andrés");
-            Curso curso2 = new Curso("Curso Php", "Marcos");
+            //Curso curso1 = new Curso("Curso Java", "Andrés");
+            //Curso curso2 = new Curso("Curso Php", "Marcos");
+            Curso curso1 = em.find(Curso.class, 1L);
+            Curso curso2 = em.find(Curso.class, 2L);
 
             alumno1.addCurso(curso1);
             alumno1.addCurso(curso2);
 
             alumno2.addCurso(curso2);
 
-            em.persist(alumno1);
-            em.persist(alumno2);
-
+            //no require merge
             em.getTransaction().commit();
 
             System.out.println(alumno1);
@@ -34,9 +34,8 @@ public class HibAsocManyToManyBidirec {
 
             em.getTransaction().begin();
 
-            //Curso curso3 = em.find(Curso.class, 3L);
             Curso curso3 = new Curso("Curso Java", "Andrés");
-            curso3.setId(3L);
+            curso3.setId(2L);
 
             //elimina de la tabla alumnos_cursos
             alumno1.removeCurso(curso3);

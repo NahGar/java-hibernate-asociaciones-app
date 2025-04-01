@@ -32,16 +32,6 @@ public class HibAsocManyToManyFind {
             System.out.println(alumno1);
             System.out.println(alumno2);
 
-            em.getTransaction().begin();
-
-            curso2 = em.find(Curso.class, 2L);
-            //elimina de la tabla alumnos_cursos
-            alumno1.getCursos().remove(curso2);
-
-            em.getTransaction().commit();
-
-            System.out.println(alumno1);
-            System.out.println(alumno2);
         }
         catch (Exception e) {
             em.getTransaction().rollback();
