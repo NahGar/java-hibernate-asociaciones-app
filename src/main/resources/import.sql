@@ -8,3 +8,4 @@ INSERT INTO direcciones (calle, numero) VALUES ("Surraco", "1966");
 INSERT INTO direcciones (calle, numero) VALUES ("Pedro Vidal", "1090");
 INSERT INTO clientes_direcciones (id_cliente, id_direccion) VALUES (1,1);
 INSERT INTO clientes_direcciones (id_cliente, id_direccion) VALUES (1,2);
+INSERT INTO clientes_detalles (prime, puntos_acumulados, id_cliente) VALUES (1,800,1);

@@ -29,8 +29,8 @@ public class Cliente {
 
     //cascade all al crear cliente crea a las direcciones
     //orphanRemoval elimina las direcciones que queden sin vinculación con algún cliente
-    //FetchType.EAGER carga todas las tablas dependientes al cargar el Cliente, no es lo
-    //recomendado ya que puede enlentecer mucho
+    //FetchType.EAGER carga todas las tablas dependientes al cargar el Cliente, puede no ser lo
+    //ideal ya que puede enlentecer mucho
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     //@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     //sin JoinColumn crea una tabla intermedia clientes_direcciones con los ids de ambas tablas
