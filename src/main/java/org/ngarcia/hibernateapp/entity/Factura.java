@@ -14,7 +14,9 @@ public class Factura {
     private String descripcion;
     private Long total;
 
-    @ManyToOne
+    //por defecto es EAGER
+    //@ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     //por default pone nombre cliente_id, pero se puede cambiar
     @JoinColumn(name="id_cliente")
     private Cliente cliente;
