@@ -1,9 +1,8 @@
 package org.ngarcia.hibernateapp;
 
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Root;
+import jakarta.persistence.criteria.*;
+import org.ngarcia.hibernateapp.entity.Cliente;
 import org.ngarcia.hibernateapp.entity.Factura;
 import org.ngarcia.hibernateapp.util.JpaUtil;
 
@@ -17,7 +16,11 @@ public class HibFetchManyToOneCriteria {
       CriteriaBuilder cb = em.getCriteriaBuilder();
       CriteriaQuery<Factura> query = cb.createQuery(Factura.class);
       Root<Factura> factura = query.from(Factura.class);
-      query.select(factura);
+      //si no se indica JoinType hace INNER JOIN
+      Join<Factura, Cliente> cliente = (Join) factura.fetch("cliente", JoinType.LEFT);
+      cliente.fetch("detalle", JoinType.LEFT);
+      //query.select(factura);
+      query.select(factura).where(cb.equal(cliente.get("id"), 1L));
       List<Factura> facturas = em.createQuery(query).getResultList();
       facturas.forEach( f-> System.out.println(f.getDescripcion() + " " +
               f.getCliente().getNombre()));
